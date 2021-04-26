@@ -13,6 +13,7 @@ const bodyParser = require('body-parser')
 const endlessRoute = require('./routes/endless')
 const sakumoRoute = require('./routes/sakumo')
 const teamRoute = require('./routes/team')
+const newsRoute = require('./routes/news')
 
 
 
@@ -27,11 +28,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/endless-space', endlessRoute);
 app.use('/sakumo', sakumoRoute);
 app.use('/team', teamRoute);
+app.use('/news', newsRoute);
 
 
 app.get('/', async (req, res) => {
     res.render('home', { title: 'Home' })
 });
 
+app.get('/contact', async (req, res) => {
+    res.render('contact', { title: 'Kontakt' })
+});
 
 app.listen(PORT, () => console.log(`Now listening to requests on port ${PORT}`));
