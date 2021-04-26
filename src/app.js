@@ -32,7 +32,23 @@ app.use('/news', newsRoute);
 
 
 app.get('/', async (req, res) => {
-    res.render('home', { title: 'Home' })
+    res.render('home', { title: 'Home'})
+});
+
+app.get('/impressum', async (req, res) => {
+    res.render('impressum', { title: 'Impressum'})
+});
+
+app.get('/datenschutz', async (req, res) => {
+    res.render('datenschutz', { title: 'Datenschutz'})
+});
+
+app.get('/endlessspace', async (req, res) => {
+    res.redirect('https://rexstudios.ch/endless-space')
+});
+
+app.get('/sakumobot', async (req, res) => {
+    res.redirect('/sakumo')
 });
 
 app.get('/contact', async (req, res) => {

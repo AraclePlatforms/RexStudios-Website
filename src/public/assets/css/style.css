@@ -30,6 +30,21 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+span.verschoben {
+  color: white;
+  background-color: orange;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+span.released {
+  color: white;
+  background-color: green;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
