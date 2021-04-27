@@ -35,6 +35,10 @@ app.get('/', async (req, res) => {
     res.render('home', { title: 'Home'})
 });
 
+app.get('/es', async (req, res) => {
+    res.redirect('/endless-space')
+});
+
 app.get('/impressum', async (req, res) => {
     res.render('impressum', { title: 'Impressum'})
 });
