@@ -1,0 +1,88 @@
+<%- include('partials/header') -%>
+<%- include('partials/nav') -%>  
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Error -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"><b>404</b></h2>
+          <p class="animate__animated animate__fadeInUp">Diese Seite wurde nicht gefunden.</p>
+          <a href="#finde-wonach-du-suchst" class="btn-get-started animate__animated animate__fadeInUp scrollto animated">Finde, wonach du suchst</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services" id="finde-wonach-du-suchst">
+      <div class="container">
+  <div class="wrapper">
+    <img src="{{ url_for('static',filename='img/cookie.png') }}" alt="">
+    <div class="content">
+      <header>Cookies Hinweis</header>
+      <p>Diese Website verwendet Cookies, um dir eine bessere Nutzererfahrung zu bieten.</p>
+      <div class="buttons">
+        <button class="item">Verstanden</button>
+        <a href="#" class="item">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+
+        <div class="input-group">
+          <div class="form-outline">
+            <input type="search" id="form1" class="form-control" />
+            <label class="form-label" for="form1">Suche</label>
+          </div>
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+                
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-discord"></i></div>
+              <h4 class="title"><a href="https://rexarmy.ch">NEKOCITY by RexArmy</a></h4>
+              <p class="description">Entdecke unsere Anime und Gaming Community</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bxs-bot"></i></div>
+              <h4 class="title"><a href="/sakumo">SakumoBot</a></h4>
+              <p class="description">Unser Discord Bot aus dem Hause RexStudios. Finde auf der Bot Website mehr Infos!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bxs-rocket"></i></div>
+              <h4 class="title"><a href="https://rexstudios.ch/endless-space">Endless Space</a></h4>
+              <p class="description">Ihr startet als Rakete auf der Erde und fliegt durch unser Sonnensystem in die unendliche leere. Dabei müsst ihr diversen Hindernissen ausweichen wie unter anderem Raum-schrott, Satelliten, Sonden, Meteoriten und vielem mehr.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="https://rexarmy.ch/member">RA Netzwerk</a></h4>
+              <p class="description">Entdecke unser Social Media Netzwerk. Auf dieser Seite erfährst du, wie man unserem YouTuber Netzwerk beitreten kann und was wir dir bieten.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+<%- include('partials/footer') -%>

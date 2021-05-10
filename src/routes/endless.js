@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/beta', async (req, res) => {
-	res.redirect('https://docs.google.com/forms/d/e/1FAIpQLSdqI3FC7bcV63sglAV7XbB09NLQo81LtboAKEgH7FxvqYOXEQ')
+	res.render('es-beta.ejs', { title: 'Beta Einschreibung - Endless-Space' });
 });
 
 
