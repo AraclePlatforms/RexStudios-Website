@@ -11,17 +11,15 @@ const password = process.env.MONGO_PASSWORD
 
 
 //mongoose
-mongoose.connect('mongodb+srv://dbUser:'+password+'@cluster0.yljgu.mongodb.net/RexStudios?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
-.then(() => console.log('connected,,'))
+mongoose.connect('mongodb+srv://dbUser:'+password+'@cluster0.yljgu.mongodb.net/RexStudios?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology : true, useCreateIndex: true})
+.then(() => console.log('Connected with Database!'))
 .catch((err)=> console.log(err));
 
 // Routes
-
-const endlessRoute = require('./routes/endless')
+const projectsRoute = require('./routes/projects')
 const sakumoRoute = require('./routes/sakumo')
 const teamRoute = require('./routes/team')
 const newsRoute = require('./routes/news')
-const shortenerRoute = require('./routes/rlnk')
 
 
 
@@ -31,29 +29,42 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Middleware Routes
-
-app.use('/endless-space', endlessRoute);
+app.use('/projekte', projectsRoute);
 app.use('/sakumo', sakumoRoute);
 app.use('/team', teamRoute);
 app.use('/news', newsRoute);
-app.use('/link-shortener', shortenerRoute);
 
 
 app.get('/', async (req, res) => {
-    res.render('home', { title: 'Home'})
+    res.render('home', { title: 'Home', homelink: true })
 });
 
-app.get('/es', async (req, res) => {
-    res.redirect('/endless-space')
+
+app.get('/community', async (req, res) => {
+    res.render('community', { title: 'Discord Community', communitylink: true })
 });
 
-app.get('/rlnk', async (req, res) => {
-    res.redirect('/link-shortener')
+app.get('/dc', async (req, res) => {
+    res.redirect('https://discord.gg/sxcJd5wmvK')
+});
+
+app.get('/discord', async (req, res) => {
+    res.redirect('https://discord.gg/sxcJd5wmvK')
+});
+
+app.get('/intragalaxia', async (req, res) => {
+    res.redirect('/projekte/intragalaxia')
+});
+app.get('/endless-space', async (req, res) => {
+    res.redirect('/projekte/intragalaxia')
 });
 app.get('/linkshortener', async (req, res) => {
     res.redirect('/link-shortener')
 });
 
+app.get('/link-shortener', async (req, res) => {
+    res.redirect('/projekte/link-shortener')
+});
 
 app.get('/impressum', async (req, res) => {
     res.render('impressum', { title: 'Impressum'})
@@ -72,7 +83,7 @@ app.get('/sakumobot', async (req, res) => {
 });
 
 app.get('/contact', async (req, res) => {
-    res.render('contact', { title: 'Kontakt' })
+    res.render('contact', { title: 'Kontakt', contactlink: true })
 });
 
 app.use(function(req, res, next) {

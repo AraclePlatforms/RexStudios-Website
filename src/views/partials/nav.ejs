@@ -5,25 +5,25 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <h1 class="text-light"><a href="/"><span>RexStudios</span></a></h1>
-        <!--<a href="/"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!--<h1 class="text-light"><a href="/"><span>RexStudios</span></a></h1>-->
+        <a href="/"><img src="/img/rexstudios_logo.png" alt="rexstudios" draggable="false" (dragstart)="false;" class="img-fluid unselectable"></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active " href="/">Home</a></li>
-          <li class="dropdown"><a href="/projekte"><span>Projekte</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="<%if (typeof homelink !== "undefined") { %>active<% } %>" href="/">Home</a></li>
+          <li><a class="<%if (typeof newslink !== "undefined") { %>active<% } %>" href="/news">News</a></li>
+          <li class="dropdown"><a class="<%if (typeof projectlink !== "undefined") { %>active<% } %>" href="/projekte"><span>Projekte</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/sakumo">SakumoBot</a></li>
-              <li><a href="/endlessspace">Endless Space</a></li>
-              <li><a href="/link-shortener">Link Shortener (Rlnk)</a></li>
-              <li><a href="https://rexarmy.ch">RexArmy (Community)</a></li>
-              <li><a href="https://coding.rexarmy.ch">RA Coding Community</a></li>
+              <li><a href="/projekte/sakumo">SakumoBot</a></li>
+              <li><a href="/projekte/intragalaxia">IntraGalaxia</a></li>
+              <li><a href="/projekte/link-shortener">Link Shortener</a></li>
+              <li><a href="https://rexarmy.ch" target="_blank">RexArmy</a></li>
             </ul>
           </li>
-          <li><a href="/team">Team</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/contact">Kontakt</a></li>
+          <li><a class="<%if (typeof teamlink !== "undefined") { %>active<% } %>" href="/team">Team</a></li>
+          <li><a class="<%if (typeof communitylink !== "undefined") { %>active<% } %>" href="/community">Community</a></li>
+          <li><a class="<%if (typeof contactlink !== "undefined") { %>active<% } %>" href="/contact">Kontakt</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

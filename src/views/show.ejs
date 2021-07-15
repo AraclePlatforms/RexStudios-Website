@@ -1,0 +1,162 @@
+<%- include('partials/header') -%>
+<%- include('partials/nav') -%>  
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>News</h2>
+
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/news">News</a></li>
+            <li><%= article.title %></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="/news/<%= article.slug %>"><%= article.title %></a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/news/<%= article.slug %>">Admin</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="/news/<%= article.slug %>"><time datetime="2021-04-04"><%= article.createdAt.toLocaleDateString('de-DE') %></time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="/news/<%= article.slug %>">0 Kommentare</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <%- article.sanitizedHtml %>
+              </div>
+
+              <div class="entry-footer">
+                <i class="bi bi-folder"></i>
+                <ul class="cats">
+                  <li><a href="#">News</a></li>
+                </ul>
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  <li><a href="#">Neuheit</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Name</a></li>
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-comments">
+
+              <h4 class="comments-count">0 Kommentare</h4>
+
+ 
+
+              <div class="reply-form">
+                <h4>Zurzeit sind keine Kommentare möglich</h4>
+                <p>Wir werden dieses Feature demnächst freigeben</p>
+                <!--<form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>-->
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Suche</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+
+              <h3 class="sidebar-title">Neuste Artikel</h3>
+              <div class="sidebar-item recent-posts">
+
+                <% articles.slice(0, 3).forEach(article => { %>
+                  <div class="post-item clearfix">
+                    <img src="assets/img/blog/blog-recent-1.jpg" alt="">
+                    <h4><a href="/news/<%= article.slug %>"><%= article.title %></a></h4>
+                    <time datetime="<%= article.createdAt.toLocaleDateString('de-DE', options) %>"><%= article.createdAt.toLocaleDateString('de-DE', options) %></time>
+                  </div>
+                <% }) %>
+
+            
+
+              </div><!-- End sidebar recent posts-->
+
+              <!--<h3 class="sidebar-title">Tags</h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">App</a></li>
+                  <li><a href="#">IT</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Office</a></li>
+                  <li><a href="#">Creative</a></li>
+                  <li><a href="#">Studio</a></li>
+                  <li><a href="#">Smart</a></li>
+                  <li><a href="#">Tips</a></li>
+                  <li><a href="#">Marketing</a></li>
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+<%- include('partials/footer') -%>  

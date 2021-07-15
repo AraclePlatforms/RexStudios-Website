@@ -10,16 +10,16 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Willkommen auf der neuen <span>RexStudios</span> Seite</h2>
           <p class="animate__animated animate__fadeInUp">Nun sind alle Softwares und Projekte auf dieser Seite vereint. Es erwarten euch viele Erneuerungen.</p>
-          <a href="https://rexstudios.ch/news/alles-wird-neu" class="btn-get-started animate__animated animate__fadeInUp">Mehr dazu</a>
+          <a href="https://rexstudios.ch/news/alles-wird-neu-rexstudios-verbindet-alles" class="btn-get-started animate__animated animate__fadeInUp">Mehr dazu</a>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Endless-Space Beta Release</h2>
-          <p class="animate__animated animate__fadeInUp">Das erste Spiel aus dem Hause RexStudios befindet sich in der Beta Phase. Unter folgendem Link kannst du dich als Tester eintragen:</p>
-          <a href="https://rexstudios.ch/endless-space/beta" class="btn-get-started animate__animated animate__fadeInUp">Jetzt eintragen</a>
+          <h2 class="animate__animated animate__fadeInDown">Neue Website für IntraGalaxia</h2>
+          <p class="animate__animated animate__fadeInUp">Das erste Spiel aus dem Hause RexStudios befindet sich in der Beta Phase. Unter folgendem Link könnt ihr mehr Infos über das Spiel erfahren:</p>
+          <a href="https://intragalaxia.com" class="btn-get-started animate__animated animate__fadeInUp">Zur Website</a>
         </div>
       </div>
 
@@ -28,7 +28,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Deutschsprachige Coding Community</h2>
           <p class="animate__animated animate__fadeInUp">Du hast eine allgemeine Frage im Bereich Coding? Oder möchtest du einfach Leute aus dem gleichen Interessengebiet kennenlernen? Dann ist unsere Coding Community genau die richtige für dich. Trete noch heute bei</p>
-          <a href="https://discord.gg/YS84Gq5" class="btn-get-started animate__animated animate__fadeInUp">Jetzt beitreten</a>
+          <a href="/community" class="btn-get-started animate__animated animate__fadeInUp">Mehr erfahren</a>
         </div>
       </div>
 
@@ -48,17 +48,17 @@
     <!-- ======= Services Section ======= -->
     <section class="services">
       <div class="container">
-  <div class="wrapper">
-    <img src="{{ url_for('static',filename='img/cookie.png') }}" alt="">
-    <div class="content">
-      <header>Cookies Hinweis</header>
-      <p>Diese Website verwendet Cookies, um dir eine bessere Nutzererfahrung zu bieten.</p>
-      <div class="buttons">
-        <button class="item">Verstanden</button>
-        <a href="#" class="item">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
+        <div class="wrapper" style="z-index: 999;position:fixed;">
+          <img src="{{ url_for('static',filename='img/cookie.png') }}" alt="">
+          <div class="content">
+            <header>Cookies Hinweis</header>
+            <p>Diese Website verwendet Cookies, um dir eine bessere Nutzererfahrung zu bieten.</p>
+            <div class="buttons">
+              <button class="item">Verstanden</button>
+              <a href="#" class="item">Mehr erfahren</a>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
             <div class="icon-box icon-box-pink">
@@ -71,7 +71,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box icon-box-cyan">
               <div class="icon"><i class="bx bxs-bot"></i></div>
-              <h4 class="title"><a href="https://sakumo.ywk.ch">SakumoBot</a></h4>
+              <h4 class="title"><a href="/projekte/sakumo">SakumoBot</a></h4>
               <p class="description">Unser Discord Bot aus dem Hause RexStudios. Finde auf der Bot Website mehr Infos!</p>
             </div>
           </div>
@@ -79,7 +79,7 @@
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="icon-box icon-box-green">
               <div class="icon"><i class="bx bxs-rocket"></i></div>
-              <h4 class="title"><a href="https://rexstudios.ch/endless-space">Endless Space</a></h4>
+              <h4 class="title"><a href="/projekte/intragalaxia">IntraGalaxia</a></h4>
               <p class="description">Ihr startet als Rakete auf der Erde und fliegt durch unser Sonnensystem in die unendliche leere. Dabei müsst ihr diversen Hindernissen ausweichen wie unter anderem Raum-schrott, Satelliten, Sonden, Meteoriten und vielem mehr.</p>
             </div>
           </div>
@@ -111,13 +111,13 @@
 
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-python"></i></div>
-              <h4 class="title"><a href="">Coding Community</a></h4>
+              <h4 class="title"><a href="/community">Coding Community</a></h4>
               <p class="description">In unserem Coding Discord Server lernst du viele Leute mit dem gleichen Interessengebiet kennen. Sie helfen dir bei Problemen weiter und führen interessante Unterhaltungen rund um das Thema.</p>
             </div>
 
             <div class="icon-box">
               <div class="icon"><i class="bx bx-video"></i></div>
-              <h4 class="title"><a href="">Einführungsvideo</a></h4>
+              <h4 class="title"><a href="https://www.youtube.com/watch?v=T9DLW0qI_nQ">Einführungsvideo</a></h4>
               <p class="description">Links findest du das Einführungsvideo für unseren Server</p>
             </div>
 
@@ -142,7 +142,7 @@
           <div class="col-md-7 pt-4">
             <h3>Multifunktionaler Discord Bot</h3>
             <p>
-              Sakumo, unser Discord Bot, kann Moderations, Fun und nützliche Commands ausführen. Er vereinfacht die Server-Moderation mittels der vielfalt an Auto-Commands und baut den Server mit einigen Konfigurationen, wie beispielsweise das schnelle Bearbeiten von Usernames aus. <br>Auch für Server-Mitglieder ist der Bot gut geeignet. Er bietet einige Interaktions- und Bildbearbeitungs Befehle. Das kommende Shop System wird ein grosses Highlight werden, weitere Infos dazu auf der <a href="https://sakumo.ywk.ch">Website</a> von Sakumo Bot.
+              Sakumo, unser Discord Bot, kann Moderations, Fun und nützliche Commands ausführen. Er vereinfacht die Server-Moderation mittels der vielfalt an Auto-Commands und baut den Server mit einigen Konfigurationen, wie beispielsweise das schnelle Bearbeiten von Usernames aus. <br>Auch für Server-Mitglieder ist der Bot gut geeignet. Er bietet einige Interaktions- und Bildbearbeitungs Befehle. Das kommende Shop System wird ein grosses Highlight werden, weitere Infos dazu auf der <a href="/sakumo">Website</a> von Sakumo Bot.
             </p>
             <ul>
               <li><i class="bi bi-check"></i>Über 70 Commands</li>
@@ -158,25 +158,25 @@
           <div class="col-md-7 pt-5 order-2 order-md-1">
             <h3>Aktive Communities</h3>
             <p>
-              Wir betrieben verschiedene Communities in verschiedenen Bereichen, für die unsere Abteilung RexArmy.ch zuständig ist. Die <b>Gaming-Community</b> hat viele aktive Spieler. Momentan bauen wir hier eine grössere Nintendo Community auf, wo regelmässige Turniere stattfinden werden.
+              Wir betrieben verschiedene Communities in verschiedenen Bereichen, für die unsere Abteilung RexArmy.ch zuständig ist. Die <b>Gaming-Community</b> hat viele aktive Spieler. Momentan bauen wir hier eine grössere Nintendo Community auf, wo regelmässige Turniere stattfinden werden. <a href="https://discord.gg/nR7MvQ9MwG" target="_blank">Trete jetzt bei</a>.
             </p>
             <p>
-              Unsere Coding Community ist hilfsbereit, kompetent und steht für interessante Gespräche rund um die Programmiersprachen offen. Trete über <a href="https://discord.gg/pwaAUTMUta">diesen Link</a> bei.
+              Unsere <b>Coding Community</b> ist hilfsbereit, kompetent und steht für interessante Gespräche rund um die Programmiersprachen offen. Trete über <a href="https://discord.gg/pwaAUTMUta" target="_blank">diesen Link</a> bei.
             </p>
           </div>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-md-5">
-            <img src="assets/img/features-3.svg" class="img-fluid" alt="">
+            <img src="/img/phone-es.png" class="img-fluid" alt="" style="width:400px;">
           </div>
           <div class="col-md-7 pt-5">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Mobile Game IntraGalaxia</h3>
+            <p>Ready for Take off? Wir präsentieren unser erstes Mobile Game im Weltall Thema.</p>
             <ul>
-              <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
+              <li><i class="bi bi-check"></i>Fliege so weit wie noch niemand je zuvor. Entdecke neue Planeten und überlebe gefährliche Meteoritenhagel. Wie weit wirst du fliegen?</li>
+              <li><i class="bi bi-check"></i> Sammle deine Lieblingsraketen, wie eine Falcon 9 oder die berühmt berüchtigte Apollo 11 und fliege mit ihnen durch Galaxien. Schaffst du es eine riesige Flotte von Raumschiffen zusammenzustellen.</li>
+              <li><i class="bi bi-check"></i>Im kompletten Spiel sind haufenweise versteckte Easter Eggs, anspielungen auf andere Spiele sowie kleine versteckte Nachrichten untergebracht.</li>
             </ul>
           </div>
         </div>
@@ -186,15 +186,12 @@
             <img src="assets/img/features-4.svg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7 pt-5 order-2 order-md-1">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <h3>Ein unabhängiger und kostenfreier Link Shortener</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Verschönere deine Links! Mehr Informationen zu diesem Projekt kommen in Kürze. 
             </p>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+              
             </p>
           </div>
         </div>

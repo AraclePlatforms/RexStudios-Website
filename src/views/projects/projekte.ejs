@@ -1,0 +1,78 @@
+<%- include('../partials/header') -%>
+<%- include('../partials/nav') -%>  
+
+  <main id="main">
+    <!-- ======= Our Team Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Projekte</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Projekte</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section class="services" id="finde-wonach-du-suchst">
+      <div class="container">
+  <div class="wrapper">
+    <img src="{{ url_for('static',filename='img/cookie.png') }}" alt="">
+    <div class="content">
+      <header>Cookies Hinweis</header>
+      <p>Diese Website verwendet Cookies, um dir eine bessere Nutzererfahrung zu bieten.</p>
+      <div class="buttons">
+        <button class="item">Verstanden</button>
+        <a href="#" class="item">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+
+                
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="bx bxl-discord"></i></div>
+              <h4 class="title"><a href="https://rexarmy.ch">NEKOCITY by RexArmy</a></h4>
+              <p class="description">Entdecke unsere Anime und Gaming Community</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box icon-box-cyan">
+              <div class="icon"><i class="bx bxs-bot"></i></div>
+              <h4 class="title"><a href="/sakumo">SakumoBot</a></h4>
+              <p class="description">Unser Discord Bot aus dem Hause RexStudios. Finde auf der Bot Website mehr Infos!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-green">
+              <div class="icon"><i class="bx bxs-rocket"></i></div>
+              <h4 class="title"><a href="https://rexstudios.ch/intragalaxia">IntraGalaxia</a></h4>
+              <p class="description">Ihr startet als Rakete auf der Erde und fliegt durch unser Sonnensystem in die unendliche leere. Dabei müsst ihr diversen Hindernissen ausweichen wie unter anderem Raum-schrott, Satelliten, Sonden, Meteoriten und vielem mehr.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box icon-box-blue">
+              <div class="icon"><i class="bx bx-link"></i></div>
+              <h4 class="title"><a href="https://rexstudios.ch/link-shortener">Link Shortener</a></h4>
+              <p class="description">Wir ermöglichen euch eine neue Link Shortener Plattform ohne Werbung und alles völlig kostenlos. Es werden nach und nach mehr Funktionen kommen.</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+<%- include('../partials/footer') -%>
